@@ -1,6 +1,6 @@
-import {Card} from '../../types/Card';
-import data from '../card/card.json';
-import '../card/card.scss';
+import { Card } from "../../types/Card";
+import data from "../card/card.json";
+import "../card/card.scss";
 
 /**
  * Card decorator function
@@ -19,18 +19,45 @@ import '../card/card.scss';
  * @param {Object} image Image source/alt
  * @param {Object} button Button href/label
  */
-function decorate({title, body, image, button}: Card) {
-    const app = document.getElementById("app");
-    const parent = document.createElement("div");
-    const h1 = document.createElement("h1");
+function decorate({ title, body, image, button }: Card) {
+  const app = document.getElementById("app");
+  const parent = document.createElement("div");
 
-    // title example, we want this to read in from the props
-    h1.textContent = "Card Title";
-    parent.append(h1);
+  // Image (if defined)
+  if (image) {
+    const imgEl = document.createElement("img");
+    imgEl.classList.add("card-img");
+    imgEl.src = image.src;
+    imgEl.alt = image.alt;
+    parent.append(imgEl);
+  }
 
-    parent.classList.add("card");
+  // Title
+  const titleEl = document.createElement("h1");
+  titleEl.classList.add("card-title");
+  titleEl.textContent = title;
+  parent.append(titleEl);
 
-    app?.appendChild(parent);
+  // Body
+  const contentEl = document.createElement("p");
+  contentEl.classList.add("card-body");
+  contentEl.textContent = body;
+  parent.append(contentEl);
+
+  // Button/Link (if defined)
+  if (button) {
+    const btnEl = document.createElement("a");
+    btnEl.classList.add("card-btn");
+    btnEl.href = button.href;
+    btnEl.title = button.label;
+    btnEl.textContent = button.label;
+    btnEl.classList.add("btn");
+    parent.append(btnEl);
+  }
+
+  parent.classList.add("card");
+
+  app?.appendChild(parent);
 }
 
 decorate(data);

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card -> should match snapshot 1`] = `
+<div
+  class="card"
+>
+  <img
+    alt="powerlines"
+    class="card-img"
+    src="https://www.wesco.com/content/dam/wesco/assets/wesco/images/600/Power_Lines_Orange_Sunset_1316185179_RGB.jpg"
+  />
+  <h1
+    class="card-title"
+  >
+    Powerlines
+  </h1>
+  <p
+    class="card-body"
+  >
+    Here's some awesome descriptive text about powerlines! The point of this text is to test responsive styling.
+  </p>
+  <a
+    class="card-btn btn"
+    href="#"
+    title="Learn more"
+  >
+    Learn more
+  </a>
+</div>
+`;
