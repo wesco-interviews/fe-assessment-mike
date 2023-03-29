@@ -32,7 +32,7 @@ function decorate({ items }: Grid) {
     // itemDiv.style.backgroundColor = color;
     itemDiv.classList.add("item-" + color);
 
-    parent?.append(itemDiv);
+    parent.append(itemDiv);
   });
 
   app?.append(parent);
