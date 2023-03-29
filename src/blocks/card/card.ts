@@ -59,3 +59,5 @@ function decorate({ title, body, image, button }: Card) {
 }
 
 decorate(data);
+
+export default decorate;

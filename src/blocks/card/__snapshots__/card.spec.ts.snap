@@ -5,26 +5,26 @@ exports[`Card -> should match snapshot 1`] = `
   class="card"
 >
   <img
-    alt="powerlines"
+    alt="Test Image"
     class="card-image"
-    src="https://www.wesco.com/content/dam/wesco/assets/wesco/images/600/Power_Lines_Orange_Sunset_1316185179_RGB.jpg"
+    src="test.png"
   />
   <h1
     class="card-title"
   >
-    Powerlines
+    Test Title
   </h1>
   <p
     class="card-body"
   >
-    Here's some awesome descriptive text about powerlines! The point of this text is to test responsive styling.
+    Test Body
   </p>
   <a
     class="card-btn"
-    href="#"
-    title="Learn more"
+    href="http://test.com"
+    title="Test Button"
   >
-    Learn more
+    Test Button
   </a>
 </div>
 `;

@@ -34,12 +34,7 @@ function decorate({ items }: Grid) {
     parent.appendChild(itemDiv);
   });
 
-  // Add error handing
-  if (app) {
-    app.appendChild(parent);
-  } else {
-    console.error("Could not find element with id 'app'");
-  }
+  app?.appendChild(parent);
 }
 
 decorate(data);

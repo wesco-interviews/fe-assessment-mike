@@ -1,11 +1,5 @@
-import * as fs from "fs";
-import * as path from "path";
 import decorate from "./grid";
 import { Grid } from "../../types/Grid";
-
-const html = fs.readFileSync(path.resolve(__dirname, "./grid.html"));
-
-jest.dontMock("fs");
 
 // Set up a mock data object
 const mockData: Grid = {
@@ -25,12 +19,18 @@ const mockData: Grid = {
 
 describe("Grid ->", function () {
   beforeEach(function () {
-    document.documentElement.innerHTML = html.toString();
-    require("./grid");
+    // Set up a mock DOM with an "app" element
+    const app = document.createElement("div");
+    app.id = "app";
+    document.body.appendChild(app);
   });
 
   afterEach(function () {
     jest.resetModules();
+  });
+
+  it("should have access to DOM", function () {
+    expect(document.getElementById("app")).toBeTruthy();
   });
 
   it("renders a grid with items", () => {
