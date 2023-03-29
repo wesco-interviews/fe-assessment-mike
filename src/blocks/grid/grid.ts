@@ -43,3 +43,5 @@ function decorate({ items }: Grid) {
 }
 
 decorate(data);
+
+export default decorate;
