@@ -6,7 +6,7 @@ exports[`Card -> should match snapshot 1`] = `
 >
   <img
     alt="powerlines"
-    class="card-img"
+    class="card-image"
     src="https://www.wesco.com/content/dam/wesco/assets/wesco/images/600/Power_Lines_Orange_Sunset_1316185179_RGB.jpg"
   />
   <h1
@@ -20,7 +20,7 @@ exports[`Card -> should match snapshot 1`] = `
     Here's some awesome descriptive text about powerlines! The point of this text is to test responsive styling.
   </p>
   <a
-    class="card-btn btn"
+    class="card-btn"
     href="#"
     title="Learn more"
   >
