@@ -22,6 +22,7 @@ import "../card/card.scss";
 function decorate({ title, body, image, button }: Card) {
   const app = document.getElementById("app");
   const parent = document.createElement("div");
+  parent.classList.add("card");
 
   // Image (if defined)
   if (image) {
@@ -29,20 +30,20 @@ function decorate({ title, body, image, button }: Card) {
     imgEl.classList.add("card-img");
     imgEl.src = image.src;
     imgEl.alt = image.alt;
-    parent.append(imgEl);
+    parent.appendChild(imgEl);
   }
 
   // Title
   const titleEl = document.createElement("h1");
   titleEl.classList.add("card-title");
   titleEl.textContent = title;
-  parent.append(titleEl);
+  parent.appendChild(titleEl);
 
   // Body
   const contentEl = document.createElement("p");
   contentEl.classList.add("card-body");
   contentEl.textContent = body;
-  parent.append(contentEl);
+  parent.appendChild(contentEl);
 
   // Button/Link (if defined)
   if (button) {
@@ -51,11 +52,8 @@ function decorate({ title, body, image, button }: Card) {
     btnEl.href = button.href;
     btnEl.title = button.label;
     btnEl.textContent = button.label;
-    btnEl.classList.add("btn");
-    parent.append(btnEl);
+    parent.appendChild(btnEl);
   }
-
-  parent.classList.add("card");
 
   app?.appendChild(parent);
 }
