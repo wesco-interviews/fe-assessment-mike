@@ -27,7 +27,7 @@ function decorate({ title, body, image, button }: Card) {
   // Image (if defined)
   if (image) {
     const imgEl = document.createElement("img");
-    imgEl.classList.add("card-img");
+    imgEl.classList.add("card-image");
     imgEl.src = image.src;
     imgEl.alt = image.alt;
     parent.appendChild(imgEl);
